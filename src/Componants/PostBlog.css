@@ -1,0 +1,134 @@
+textarea {
+    width: 60%;
+    padding-bottom: 14%;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 20px;
+    border-radius: 12px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-weight: bold;
+  }
+  textarea:focus{
+    outline: none;
+    border-radius: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  .feed{
+    text-align: center;
+    margin-left: 25%;
+    background-color: #4CAF50;
+    margin-right: 25%;
+  }
+  .Posted{
+    display: flex;
+    background-color: whitesmoke;
+    column-gap: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 4%;
+    border-radius: 12px;
+    width: 120%;
+  }
+  .BlogContainer{
+    margin-left: 20%;
+    margin-right: 30%;
+  }
+  .CaptionDiv{
+    /* margin-right: 40%; */
+    width: 50%;
+    margin-top: 6%;
+  }
+  .postimg{
+    width: 140%;
+    height: 200%;
+  }
+ 
+  .profileimg{
+    width: 10%;
+    height: 3%;
+    /* border: solid black 2px; */
+    border-radius: 50%;
+  }
+  .postbutton {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  b{
+    margin-top: -30%;
+  }
+  .comment{
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  #img1{
+    width: 50%;
+    height: 100%;
+  }
+  #Submit_id{
+    color: white;
+    padding: 2px 2px;
+    margin: 8px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .EditImg{
+    width: 15%;
+  }
+  .EditButton{
+   border-style: none;
+   border-radius: none;
+   background-color: white;
+   width: 75%;
+  }
+  .DeleteIcon{
+    width: 15%;
+    margin-left: 4%;
+    margin-top: -2%;
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    justify-content: center;
+  }
+  ul li {
+    padding: 8px 16px;
+    background-color: #008CBA;
+  }
+  
+  ul li:last-child {
+    border-bottom: none
+  }
+.backButton{
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 15px;
+    margin-top: 2%;
+}
+.action{
+  border-radius: 50%;
+  border-style: none;
+  margin-right: 4%;
+}
