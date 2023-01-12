@@ -5,7 +5,7 @@ export const Login = () => {
   const [userlogname, setuserLogname] = useState('');
   const [pass, setPass] = useState('');
   const LoginButtonHandler = () => {
-   let userlogdata = localStorage.getItem("data")
+    let userlogdata = localStorage.getItem("data")
     let userlogdata1 = JSON.parse(userlogdata as string)
     for (var i = 0; i < userlogdata1.length; i++) {
       // checking the data which is taken from user
@@ -21,10 +21,10 @@ export const Login = () => {
     }
   }
   // function for taking the value from input boxes
-  const userNameHandler = (e:any) => {
+  const userNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setuserLogname(e.target.value)
   }
-  const passwHandler = (e:any) => {
+  const passwHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPass(e.target.value)
   }
   // Back to sighn up page

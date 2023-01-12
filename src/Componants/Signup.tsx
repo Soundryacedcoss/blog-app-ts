@@ -11,26 +11,26 @@ type obj = {
 }
 export default function Signup() {
   const navigate = useNavigate();
-  const [name, setName] = useState< "" | string>("")
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState('')
   const [number, setNumber] = useState('')
-  const [logarr, setLogarr] = useState< any | []>([])
+  const [logarr, setLogarr] = useState<any | []>([])
   // functions for taking the value from input boxes
-  const nameHandler = (e: any) => {
+  const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
   }
-  const emailHandler = (e: any) => {
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
   }
-  const usernameHandler = (e: any) => {
+  const usernameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value)
   }
-  const passwordHandler = (e: any) => {
+  const passwordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value)
   }
-  const numberHandler = (e: any) => {
+  const numberHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNumber(e.target.value)
   }
   const SignUpButtonHandler = () => {
@@ -52,10 +52,10 @@ export default function Signup() {
     else if (username === "") {
       alert("Please enter your username");
     }
-    else if (password as any === "") {
+    else if (password as string === "") {
       alert("please enter password");
     }
-    else if (number as any === "") {
+    else if (number as string === "") {
       alert("Enter mobile number")
     }
     else if (isNaN(number as any)) {
