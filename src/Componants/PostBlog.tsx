@@ -1,5 +1,5 @@
 import "./PostBlog.css";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 type obj = {
   data: string
@@ -14,7 +14,10 @@ export const PostBlog = () => {
   const [output, setOutput] = useState<obj[] | []>([]);
   const [img, setImg] = useState("");
   const [disable, setDisable] = useState(false)
-  // const [like, setlike] = useState(0)
+  let userlogdata = sessionStorage.getItem("data")
+  let userlogdata1 = JSON.parse(userlogdata as string)
+  console.log(userlogdata1);
+
   const date = new Date()
   // functions for taking the value from input boxes
   const commentHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -76,10 +79,22 @@ export const PostBlog = () => {
       }
     }
   }
+  const LogOutHanlder=()=>{
+    window.sessionStorage.clear()
+  }
   return (
     <>
       <center>
-        <h2 style={{ textShadow: "2px 2px 4px #000000", color: "dodgerblue" }}>Welcome Blogger</h2>
+        <div style={{ display: "flex" ,justifyContent:"center",marginTop:"1%" }}>
+            <h2
+              style={{ textShadow: "2px 2px 4px #000000", color: "dodgerblue" }}>
+              Welcome {userlogdata1[0].name}</h2>
+            <div className="ImageArea"><img className="UserImage" src={userlogdata1[0].img} alt="" /></div>
+
+        </div>
+
+        <button className="Logout" onClick={LogOutHanlder}><i className="fa fa-sign-out" style={{ fontSize: "36px" }}></i></button>
+
         <div className="comment">
           <textarea
             name=""
@@ -103,11 +118,8 @@ export const PostBlog = () => {
             <div className="BlogContainer" key={Math.random()}>
               {output.map((element: obj) => (
                 <div className="Posted" key={Math.random()}>
-
                   <img id="img1" src={element.image} alt="Image will be here" />
-
                   <div className="CaptionDiv">
-
                     <b className="caption">{element.data}</b>
                     {""} <br />
                     <br />

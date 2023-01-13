@@ -8,6 +8,7 @@ type obj = {
   username: string
   password: string
   number: string
+  img:string
 }
 export default function Signup() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function Signup() {
   const [password, setPassword] = useState('')
   const [number, setNumber] = useState('')
   const [logarr, setLogarr] = useState<any | []>([])
+  const [img, setImg] = useState("");
   // functions for taking the value from input boxes
   const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
@@ -68,11 +70,12 @@ export default function Signup() {
         username: username,
         password: password,
         number: number,
+        img:img,
       }
       logarr.push(obj)
       let arr = JSON.stringify(logarr)
       // set the values in local storage
-      localStorage.setItem("data", arr);
+      sessionStorage.setItem("data", arr);
       alert("Created account succesfully Now please login")
       navigate('/Login')
     }
@@ -81,11 +84,17 @@ export default function Signup() {
   const Loginhere = () => {
     navigate('/Login')
   }
+  const ChooseImgHandler=(event: any)=>{
+    let p1 = URL.createObjectURL(event.target.files[0]);
+    setImg(p1);
+  }
   return (
     <div>
       <div className="LoginPage" >
         <h1>Sign Up</h1>
         <hr />
+        <p><img className="Image" src={img} alt="" /></p>
+        <input type="file" onChange={ChooseImgHandler} />
         <input type="text" name="name" placeholder="Full name" onChange={nameHandler} />
         <input type="text" placeholder="Enter Email" name="email" onChange={emailHandler} />
         <input type="text" name="username" placeholder="Enter username" onChange={usernameHandler} />

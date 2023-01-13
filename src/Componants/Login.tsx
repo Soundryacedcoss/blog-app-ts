@@ -5,8 +5,9 @@ export const Login = () => {
   const [userlogname, setuserLogname] = useState('');
   const [pass, setPass] = useState('');
   const LoginButtonHandler = () => {
-    let userlogdata = localStorage.getItem("data")
+    let userlogdata = sessionStorage.getItem("data")
     let userlogdata1 = JSON.parse(userlogdata as string)
+    console.log(userlogdata1);
     for (var i = 0; i < userlogdata1.length; i++) {
       // checking the data which is taken from user
       if (userlogname === userlogdata1[i].username && pass === userlogdata1[i].password) {

@@ -30,6 +30,10 @@ input[type="number"]:focus {
   margin-right: 25%;
   padding-bottom: 2%;
 }
+.Image{
+  width: 35%;
+  border-radius: 50%;
+}
 .SignUpBUtton {
   background-color: lightblue;
   padding: 3%;

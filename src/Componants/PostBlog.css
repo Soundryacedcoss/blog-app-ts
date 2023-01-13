@@ -134,3 +134,17 @@ ul li:last-child {
   margin-right: 4%;
   cursor: pointer;
 }
+.ImageArea{
+ width: 20vw;
+ border-radius: 50%;
+}
+.UserImage{
+ width: 40%;
+ height: 80px;
+ border-radius: 50%;
+}
+
+.Logout{
+  border-style: none;
+  background-color: white;
+}
